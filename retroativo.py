@@ -26,6 +26,8 @@ while current_date <= end_date:
     commit_message = f"Retroactive commit for {current_date}"
     subprocess.run(["git", "commit", "-m", commit_message, "--date", current_date.strftime("%Y-%m-%dT%H:%M:%S")], cwd=repo_path)
 
+
+
     # Avançar para a próxima hora
     current_date += timedelta(hours=1)
 

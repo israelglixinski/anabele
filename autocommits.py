@@ -1,7 +1,7 @@
 from datetime import datetime
 import subprocess
 import os
-
+from time import sleep
 
 current_directory = os.path.dirname(os.path.abspath(__file__))    
 
@@ -28,16 +28,23 @@ def git_commit(repo_path, commit_message="Commit automático"):
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         complete_message = f"{commit_message} - {timestamp}"
         subprocess.run(["git", "commit", "-m", complete_message], check=True)
-        
+        sleep(3)
         # Enviar os commits para o repositório remoto
         subprocess.run(["git", "push", ], check=True)
+        sleep(3)
         subprocess.run(["git", "checkout", "main2", ], check=True)
+        sleep(3)
     
         subprocess.run(["git", "merge", "main", "-m", complete_message], check=True)
+        sleep(3)
         subprocess.run(["git", "add", "."], check=True)
+        sleep(3)
         subprocess.run(["git", "commit", "-m", complete_message], check=True)
+        sleep(3)
         subprocess.run(["git", "push", "github", "main2", ], check=True)
+        sleep(3)
         subprocess.run(["git", "checkout", "main", ], check=True)
+        sleep(3)
         
         
         

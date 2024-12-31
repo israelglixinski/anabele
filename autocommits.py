@@ -26,13 +26,10 @@ def git_commit(repo_path, commit_message="Commit automático"):
         subprocess.run(["git", "add", "."], check=True)
         subprocess.run(["git", "push", "github", "main2", ], check=True)
         subprocess.run(["git", "checkout", "main", ], check=True)
-    except subprocess.CalledProcessError as e:
-        pass
     except Exception as e:
         pass
 
 repository_path = "C:\\Projetos\\git_duplo\\anabele"
 commit_message = "Atualização do código"
-
 
 git_commit(repository_path, commit_message)

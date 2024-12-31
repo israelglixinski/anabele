@@ -35,7 +35,7 @@ def git_commit(repo_path, commit_message="Commit automático"):
         subprocess.run(["git", "merge", "main", ], check=True)
         subprocess.run(["git", "add", "."], check=True)
         subprocess.run(["git", "commit", ], check=True)
-        subprocess.run(["git", "push", "origin", "main2", ], check=True)
+        subprocess.run(["git", "push", "github", "main2", ], check=True)
         subprocess.run(["git", "checkout", "main", ], check=True)
         
         

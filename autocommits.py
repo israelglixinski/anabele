@@ -39,7 +39,7 @@ def git_commit(repo_path, commit_message="Commit automático"):
         sleep(3)
         subprocess.run(["git", "add", "."], check=True)
         sleep(3)
-        subprocess.run(["git", "commit", "-m", complete_message], check=True)
+        # subprocess.run(["git", "commit", "-m", complete_message], check=True)
         sleep(3)
         subprocess.run(["git", "push", "github", "main2", ], check=True)
         sleep(3)

@@ -3,4 +3,4 @@ Analyze
 Better
 Learn
 
-...
+-

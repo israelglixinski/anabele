@@ -32,7 +32,8 @@ def git_commit(repo_path, commit_message="Commit automático"):
         # Enviar os commits para o repositório remoto
         subprocess.run(["git", "push", ], check=True)
         subprocess.run(["git", "checkout", "main2", ], check=True)
-        subprocess.run(["git", "merge", "main", ], check=True)
+    
+        subprocess.run(["git", "merge", "main", "-m", complete_message], check=True)
         subprocess.run(["git", "add", "."], check=True)
         subprocess.run(["git", "commit", ], check=True)
         subprocess.run(["git", "push", "github", "main2", ], check=True)

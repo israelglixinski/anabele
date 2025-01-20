@@ -29,7 +29,3 @@ def git_commit(repo_path, commit_message="Commit automático"):
     except Exception as e:
         pass
 
-repository_path = "C:\\Projetos\\git_duplo\\anabele"
-commit_message = "Atualização do código"
-
-git_commit(repository_path, commit_message)

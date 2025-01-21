@@ -4,15 +4,6 @@ import os
 
 current_directory = os.path.dirname(os.path.abspath(__file__))    
 
-def log_register(text=''):
-    yyyymmdd = datetime.now().strftime('%Y%m%d')
-    datetimestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    with open(f'{current_directory}\\logs\\autocommits\\{yyyymmdd}', 'a') as file:
-        file.write(f'{datetimestamp} - {text}\n')
-    pass
-
-log_register('...')
-
 def git_commit(repo_path, commit_message="Commit automático"):
     try:
         os.chdir(repo_path)

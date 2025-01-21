@@ -24,6 +24,7 @@ def execute_routine_thread():
         if last_execute is None or (datetime.now() - last_execute).seconds >= 3600:
             last_execute = datetime.now()
             execute_routine()
+        print(datetime.now())
         sleep(60)
 
 Thread(target=execute_routine_thread).start()

@@ -14,7 +14,7 @@ def execute_routine():
     common.log_register(f'The current dollar exchange rate: R$ {current_quote:.2f}')
     if last_quote is None or current_quote != last_quote:
         last_quote = current_quote
-        repository_path = "C:\\Projetos\\git_duplo\\anabele"
+        repository_path = "C:\\projetos\\israel\\anabele"
         commit_message = "Log update"
         autocommits.git_commit(repository_path, commit_message)
 

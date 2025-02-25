@@ -9,7 +9,7 @@ filename = "retro_commit.txt"
 
 # Criar/modificar o arquivo
 with open(filename, "w") as file:
-    file.write("Este é um commit retroativo em 1º de dezembro de 2024.\n")
+    file.write("Este é um commit retroat    ivo em 1º de dezembro de 2024.\n")
 
 # Adicionar o arquivo ao staging
 subprocess.run(["git", "add", filename], check=True)
